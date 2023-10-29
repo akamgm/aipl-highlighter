@@ -3,6 +3,9 @@
 	"name": "aipl",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -10,6 +13,12 @@
 		}
 	],
 	"repository": {
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.number-sign.aipl",
+				"match": "^#[^!].*"
+			}]
+		},
 		"keywords": {
 			"patterns": [
 			{
@@ -18,8 +27,16 @@
 			},
 			{	"name": "keyword.other.aipl",
 				"match": "^![A-Za-z0-9_-]+\\b"	
-
-			}]
+			},
+			{
+				"name": "keyword.other.io.aipl",
+				"match": "(<|<<|>|>>)[A-Za-z0-9_-]+\\b"
+			},			
+			{
+				"name": "keyword.other.ref.aipl",
+				"match": "\\{[A-Za-z0-9_-]+\\}"
+			}
+		]
 		},
 		"strings": {
 			"name": "string.quoted.double.aipl",

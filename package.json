@@ -1,0 +1,25 @@
+{
+  "name": "aipl",
+  "displayName": "aipl",
+  "description": "AIPL language highlighter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "aipl",
+      "aliases": ["aipl", "aipl"],
+      "extensions": [".aipl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "aipl",
+      "scopeName": "source.aipl",
+      "path": "./syntaxes/aipl.tmLanguage.json"
+    }]
+  }
+}

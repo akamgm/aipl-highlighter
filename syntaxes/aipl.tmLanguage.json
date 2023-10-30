@@ -9,6 +9,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#vars"
+		},	
+		{
 			"include": "#strings"
 		}
 	],
@@ -27,16 +30,22 @@
 			},
 			{	"name": "keyword.other.aipl",
 				"match": "^![A-Za-z0-9_-]+\\b"	
-			},
-			{
-				"name": "keyword.other.io.aipl",
-				"match": "(<|<<|>|>>)[A-Za-z0-9_-]+\\b"
-			},			
-			{
-				"name": "keyword.other.ref.aipl",
-				"match": "\\{[A-Za-z0-9_-]+\\}"
 			}
+
+
 		]
+		},
+		"vars": {
+			"patterns": [
+				{
+					"name": "variable.other.aipl",
+					"match": "(<|<<|>|>>)[A-Za-z0-9_-]+\\b"
+				},						
+				{
+					"name": "variable.other.aipl",
+					"match": "\\{[A-Za-z0-9_-]+\\}"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.aipl",
